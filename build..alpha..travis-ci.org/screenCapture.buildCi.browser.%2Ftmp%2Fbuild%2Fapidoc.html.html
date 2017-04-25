@@ -1,0 +1,877 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/maxogden/geojson-js-utils">geojson-utils (v1.1.0)</a>
+</h1>
+<h4>GeoJSON Utilities for JavaScript</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.geojson-utils">module geojson-utils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.area">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>area
+            <span class="apidocSignatureSpan">(polygon)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.centroid">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>centroid
+            <span class="apidocSignatureSpan">(polygon)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.destinationPoint">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>destinationPoint
+            <span class="apidocSignatureSpan">(pt, brng, dist)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.drawCircle">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>drawCircle
+            <span class="apidocSignatureSpan">(radiusInMeters, centerPoint, steps)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.geometryWithinRadius">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>geometryWithinRadius
+            <span class="apidocSignatureSpan">(geometry, center, radius)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.lineStringsIntersect">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>lineStringsIntersect
+            <span class="apidocSignatureSpan">(l1, l2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.numberToDegree">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>numberToDegree
+            <span class="apidocSignatureSpan">(number)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.numberToRadius">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>numberToRadius
+            <span class="apidocSignatureSpan">(number)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.pointDistance">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>pointDistance
+            <span class="apidocSignatureSpan">(pt1, pt2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.pointInBoundingBox">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>pointInBoundingBox
+            <span class="apidocSignatureSpan">(point, bounds)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.pointInMultiPolygon">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>pointInMultiPolygon
+            <span class="apidocSignatureSpan">(p, poly)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.pointInPolygon">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>pointInPolygon
+            <span class="apidocSignatureSpan">(p, poly)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.rectangleCentroid">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>rectangleCentroid
+            <span class="apidocSignatureSpan">(rectangle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.geojson-utils.simplify">
+            function <span class="apidocSignatureSpan">geojson-utils.</span>simplify
+            <span class="apidocSignatureSpan">(source, kink)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.geojson-utils" id="apidoc.module.geojson-utils">module geojson-utils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.area" id="apidoc.element.geojson-utils.area">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>area
+        <span class="apidocSignatureSpan">(polygon)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">area = function (polygon) {
+  var area = 0;
+  // TODO: polygon holes at coordinates[1]
+  var points = polygon.coordinates[0];
+  var j = points.length - 1;
+  var p1, p2;
+
+  for (var i = 0; i &lt; points.length; j = i++) {
+    var p1 = {
+      x: points[i][1],
+      y: points[i][0]
+    };
+    var p2 = {
+      x: points[j][1],
+      y: points[j][0]
+    };
+    area += p1.x * p2.y;
+    area -= p1.y * p2.x;
+  }
+
+  area /= 2;
+  return area;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      y: points[j][0]
+    };
+    f = p1.x * p2.y - p2.x * p1.y;
+    x += (p1.x + p2.x) * f;
+    y += (p1.y + p2.y) * f;
+  }
+
+  f = gju.<span class="apidocCodeKeywordSpan">area</span>(polygon) * 6;
+  return {
+    'type': 'Point',
+    'coordinates': [y / f, x / f]
+  };
+},
+
+gju.simplify = function (source, kink) { /* source[] array of geojson points */
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.centroid" id="apidoc.element.geojson-utils.centroid">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>centroid
+        <span class="apidocSignatureSpan">(polygon)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">centroid = function (polygon) {
+  var f, x = 0,
+    y = 0;
+  // TODO: polygon holes at coordinates[1]
+  var points = polygon.coordinates[0];
+  var j = points.length - 1;
+  var p1, p2;
+
+  for (var i = 0; i &lt; points.length; j = i++) {
+    var p1 = {
+      x: points[i][1],
+      y: points[i][0]
+    };
+    var p2 = {
+      x: points[j][1],
+      y: points[j][0]
+    };
+    f = p1.x * p2.y - p2.x * p1.y;
+    x += (p1.x + p2.x) * f;
+    y += (p1.y + p2.y) * f;
+  }
+
+  f = gju.area(polygon) * 6;
+  return {
+    'type': 'Point',
+    'coordinates': [y / f, x / f]
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.destinationPoint" id="apidoc.element.geojson-utils.destinationPoint">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>destinationPoint
+        <span class="apidocSignatureSpan">(pt, brng, dist)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destinationPoint = function (pt, brng, dist) {
+  dist = dist/6371;  // convert dist to angular distance in radians
+  brng = gju.numberToRadius(brng);
+
+  var lon1 = gju.numberToRadius(pt.coordinates[0]);
+  var lat1 = gju.numberToRadius(pt.coordinates[1]);
+
+  var lat2 = Math.asin( Math.sin(lat1)*Math.cos(dist) +
+                        Math.cos(lat1)*Math.sin(dist)*Math.cos(brng) );
+  var lon2 = lon1 + Math.atan2(Math.sin(brng)*Math.sin(dist)*Math.cos(lat1),
+                               Math.cos(dist)-Math.sin(lat1)*Math.sin(lat2));
+  lon2 = (lon2+3*Math.PI) % (2*Math.PI) - Math.PI;  // normalise to -180..+180Âº
+
+  return {
+    'type': 'Point',
+    'coordinates': [gju.numberToDegree(lon2), gju.numberToDegree(lat2)]
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.drawCircle" id="apidoc.element.geojson-utils.drawCircle">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>drawCircle
+        <span class="apidocSignatureSpan">(radiusInMeters, centerPoint, steps)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">drawCircle = function (radiusInMeters, centerPoint, steps) {
+  var center = [centerPoint.coordinates[1], centerPoint.coordinates[0]],
+    dist = (radiusInMeters / 1000) / 6371,
+    // convert meters to radiant
+    radCenter = [gju.numberToRadius(center[0]), gju.numberToRadius(center[1])],
+    steps = steps || 15,
+    // 15 sided circle
+    poly = [[center[0], center[1]]];
+  for (var i = 0; i &lt; steps; i++) {
+    var brng = 2 * Math.PI * i / steps;
+    var lat = Math.asin(Math.sin(radCenter[0]) * Math.cos(dist)
+            + Math.cos(radCenter[0]) * Math.sin(dist) * Math.cos(brng));
+    var lng = radCenter[1] + Math.atan2(Math.sin(brng) * Math.sin(dist) * Math.cos(radCenter[0]),
+                                        Math.cos(dist) - Math.sin(radCenter[0]) * Math.sin(lat));
+    poly[i] = [];
+    poly[i][1] = gju.numberToDegree(lat);
+    poly[i][0] = gju.numberToDegree(lng);
+  }
+  return {
+    "type": "Polygon",
+    "coordinates": [poly]
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var inBox = {"type": "Point", "coordinates": [5, 5]}
+var outBox = {"type": "Point", "coordinates": [15, 15]}
+
+if (!gju.pointInPolygon(inBox, box)) throw new Error()
+if (gju.pointInPolygon(outBox, box)) throw new Error()
+
+if (gju.<span class="apidocCodeKeywordSpan">drawCircle</span>(10, {"type": "Point", "coordinates": [
+0, 0]}).coordinates[0].length !== 15) throw new Error()
+if (gju.drawCircle(10, {"type": "Point", "coordinates": [0, 0]}, 50).coordinates[0].length !== 50)
+throw new Error()
+
+var centroid = gju.rectangleCentroid(box)
+if (centroid.coordinates[0] !== 5) throw new Error()
+if (centroid.coordinates[1] !== 5) throw new Error()
+
+var fairyLand = {"type": "Point", "coordinates": [-122.260000705719, 37.80919060818706]}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.geometryWithinRadius" id="apidoc.element.geojson-utils.geometryWithinRadius">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>geometryWithinRadius
+        <span class="apidocSignatureSpan">(geometry, center, radius)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">geometryWithinRadius = function (geometry, center, radius) {
+  if (geometry.type == 'Point') {
+    return gju.pointDistance(geometry, center) &lt;= radius;
+  } else if (geometry.type == 'LineString' || geometry.type == 'Polygon') {
+    var point = {};
+    var coordinates;
+    if (geometry.type == 'Polygon') {
+      // it's enough to check the exterior ring of the Polygon
+      coordinates = geometry.coordinates[0];
+    } else {
+      coordinates = geometry.coordinates;
+    }
+    for (var i in coordinates) {
+      point.coordinates = coordinates[i];
+      if (gju.pointDistance(point, center) &gt; radius) {
+        return false;
+      }
+    }
+  }
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  "type": "Polygon",
+  "coordinates": [[[-122.677, 45.523], [-122.675, 45.524]]]
+}),
+// radius (in meters)
+radius = 100;
+
+for (var i in geometryObjectsWithinBBox) {
+  if (gju.<span class="apidocCodeKeywordSpan">geometryWithinRadius</span>(geometryObjectsWithinBBox[i], center, radius)) {
+    // ... do stuff with objects inside the circle
+  }
+}
+```
+
+## Distance between two points
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.lineStringsIntersect" id="apidoc.element.geojson-utils.lineStringsIntersect">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>lineStringsIntersect
+        <span class="apidocSignatureSpan">(l1, l2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lineStringsIntersect = function (l1, l2) {
+  var intersects = [];
+  for (var i = 0; i &lt;= l1.coordinates.length - 2; ++i) {
+    for (var j = 0; j &lt;= l2.coordinates.length - 2; ++j) {
+      var a1 = {
+        x: l1.coordinates[i][1],
+        y: l1.coordinates[i][0]
+      },
+        a2 = {
+          x: l1.coordinates[i + 1][1],
+          y: l1.coordinates[i + 1][0]
+        },
+        b1 = {
+          x: l2.coordinates[j][1],
+          y: l2.coordinates[j][0]
+        },
+        b2 = {
+          x: l2.coordinates[j + 1][1],
+          y: l2.coordinates[j + 1][0]
+        },
+        ua_t = (b2.x - b1.x) * (a1.y - b1.y) - (b2.y - b1.y) * (a1.x - b1.x),
+        ub_t = (a2.x - a1.x) * (a1.y - b1.y) - (a2.y - a1.y) * (a1.x - b1.x),
+        u_b = (b2.y - b1.y) * (a2.x - a1.x) - (b2.x - b1.x) * (a2.y - a1.y);
+      if (u_b != 0) {
+        var ua = ua_t / u_b,
+          ub = ub_t / u_b;
+        if (0 &lt;= ua &amp;&amp; ua &lt;= 1 &amp;&amp; 0 &lt;= ub &amp;&amp; ub &lt;= 1) {
+          intersects.push({
+            'type': 'Point',
+            'coordinates': [a1.x + ua * (a2.x - a1.x), a1.y + ua * (a2.y - a1.y)]
+          });
+        }
+      }
+    }
+  }
+  if (intersects.length == 0) intersects = false;
+  return intersects;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var diagonalDown = { "type": "LineString","coordinates": [
+[10, 0], [0, 10]
+]}
+var farAway = { "type": "LineString","coordinates": [
+[100, 100], [110, 110]
+]}
+
+if (!gju.<span class="apidocCodeKeywordSpan">lineStringsIntersect</span>(diagonalUp, diagonalDown)) throw new Error()
+if (gju.lineStringsIntersect(diagonalUp, farAway)) throw new Error()
+
+var box = {
+"type": "Polygon",
+  "coordinates": [
+    [ [0, 0], [10, 0], [10, 10], [0, 10] ]
+  ]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.numberToDegree" id="apidoc.element.geojson-utils.numberToDegree">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>numberToDegree
+        <span class="apidocSignatureSpan">(number)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">numberToDegree = function (number) {
+  return number * 180 / Math.PI;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  for (var i = 0; i &lt; steps; i++) {
+    var brng = 2 * Math.PI * i / steps;
+    var lat = Math.asin(Math.sin(radCenter[0]) * Math.cos(dist)
+            + Math.cos(radCenter[0]) * Math.sin(dist) * Math.cos(brng));
+    var lng = radCenter[1] + Math.atan2(Math.sin(brng) * Math.sin(dist) * Math.cos(radCenter[0]),
+                                        Math.cos(dist) - Math.sin(radCenter[0]) * Math.sin(lat));
+    poly[i] = [];
+    poly[i][1] = gju.<span class="apidocCodeKeywordSpan">numberToDegree</span>(lat);
+    poly[i][0] = gju.numberToDegree(lng);
+  }
+  return {
+    "type": "Polygon",
+    "coordinates": [poly]
+  };
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.numberToRadius" id="apidoc.element.geojson-utils.numberToRadius">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>numberToRadius
+        <span class="apidocSignatureSpan">(number)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">numberToRadius = function (number) {
+  return number * Math.PI / 180;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+// written with help from @tautologe
+gju.drawCircle = function (radiusInMeters, centerPoint, steps) {
+  var center = [centerPoint.coordinates[1], centerPoint.coordinates[0]],
+    dist = (radiusInMeters / 1000) / 6371,
+    // convert meters to radiant
+    radCenter = [gju.<span class="apidocCodeKeywordSpan">numberToRadius</span>(center[0]), gju.numberToRadius(center[1])],
+    steps = steps || 15,
+    // 15 sided circle
+    poly = [[center[0], center[1]]];
+  for (var i = 0; i &lt; steps; i++) {
+    var brng = 2 * Math.PI * i / steps;
+    var lat = Math.asin(Math.sin(radCenter[0]) * Math.cos(dist)
+            + Math.cos(radCenter[0]) * Math.sin(dist) * Math.cos(brng));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.pointDistance" id="apidoc.element.geojson-utils.pointDistance">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>pointDistance
+        <span class="apidocSignatureSpan">(pt1, pt2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pointDistance = function (pt1, pt2) {
+  var lon1 = pt1.coordinates[0],
+    lat1 = pt1.coordinates[1],
+    lon2 = pt2.coordinates[0],
+    lat2 = pt2.coordinates[1],
+    dLat = gju.numberToRadius(lat2 - lat1),
+    dLon = gju.numberToRadius(lon2 - lon1),
+    a = Math.pow(Math.sin(dLat / 2), 2) + Math.cos(gju.numberToRadius(lat1))
+      * Math.cos(gju.numberToRadius(lat2)) * Math.pow(Math.sin(dLon / 2), 2),
+    c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return (6371 * c) * 1000; // returns meters
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return (6371 * c) * 1000; // returns meters
+},
+
+// checks if geometry lies entirely within a circle
+// works with Point, LineString, Polygon
+gju.geometryWithinRadius = function (geometry, center, radius) {
+  if (geometry.type == 'Point') {
+    return gju.<span class="apidocCodeKeywordSpan">pointDistance</span>(geometry, center) &lt;= radius;
+  } else if (geometry.type == 'LineString' || geometry.type == 'Polygon') {
+    var point = {};
+    var coordinates;
+    if (geometry.type == 'Polygon') {
+      // it's enough to check the exterior ring of the Polygon
+      coordinates = geometry.coordinates[0];
+    } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.pointInBoundingBox" id="apidoc.element.geojson-utils.pointInBoundingBox">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>pointInBoundingBox
+        <span class="apidocSignatureSpan">(point, bounds)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pointInBoundingBox = function (point, bounds) {
+  return !(point.coordinates[1] &lt; bounds[0][0] || point.coordinates[1] &gt; bounds[1][0] || point.coordinates[0] &lt; bounds[0][1] ||
+point.coordinates[0] &gt; bounds[1][1])
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  gju.pointInPolygon = function (p, poly) {
+var coords = (poly.type == "Polygon") ? [ poly.coordinates ] : poly.coordinates
+
+var insideBox = false
+for (var i = 0; i &lt; coords.length; i++) {
+  if (gju.<span class="apidocCodeKeywordSpan">pointInBoundingBox</span>(p, boundingBoxAroundPolyCoords(coords[i]))) insideBox =
+true
+}
+if (!insideBox) return false
+
+var insidePoly = false
+for (var i = 0; i &lt; coords.length; i++) {
+  if (pnpoly(p.coordinates[1], p.coordinates[0], coords[i])) insidePoly = true
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.pointInMultiPolygon" id="apidoc.element.geojson-utils.pointInMultiPolygon">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>pointInMultiPolygon
+        <span class="apidocSignatureSpan">(p, poly)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pointInMultiPolygon = function (p, poly) {
+  var coords_array = (poly.type == "MultiPolygon") ? [ poly.coordinates ] : poly.coordinates
+
+  var insideBox = false
+  var insidePoly = false
+  for (var i = 0; i &lt; coords_array.length; i++){
+    var coords = coords_array[i];
+    for (var j = 0; j &lt; coords.length; j++) {
+      if (!insideBox){
+        if (gju.pointInBoundingBox(p, boundingBoxAroundPolyCoords(coords[j]))) {
+          insideBox = true
+        }
+      }
+    }
+    if (!insideBox) return false
+    for (var j = 0; j &lt; coords.length; j++) {
+      if (!insidePoly){
+        if (pnpoly(p.coordinates[1], p.coordinates[0], coords[j])) {
+          insidePoly = true
+        }
+      }
+    }
+  }
+
+  return insidePoly
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var multipoly = {"type": "MultiPolygon",
+			        "coordinates": [
+			        	[ [ [0,0],[0,10],[10,10],[10,0],[0,0] ] ] ,
+			        	[ [ [10,10],[10,20],[20,20],[20,10],[10,10] ] ]
+			        ]
+			    };
+
+if (!gju.<span class="apidocCodeKeywordSpan">pointInMultiPolygon</span>(point,multipoly)) throw new Error();
+if (gju.pointInMultiPolygon(singlepoint,multipoly)) throw new Error();
+
+console.log('all passed')
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.pointInPolygon" id="apidoc.element.geojson-utils.pointInPolygon">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>pointInPolygon
+        <span class="apidocSignatureSpan">(p, poly)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pointInPolygon = function (p, poly) {
+  var coords = (poly.type == "Polygon") ? [ poly.coordinates ] : poly.coordinates
+
+  var insideBox = false
+  for (var i = 0; i &lt; coords.length; i++) {
+    if (gju.pointInBoundingBox(p, boundingBoxAroundPolyCoords(coords[i]))) insideBox = true
+  }
+  if (!insideBox) return false
+
+  var insidePoly = false
+  for (var i = 0; i &lt; coords.length; i++) {
+    if (pnpoly(p.coordinates[1], p.coordinates[0], coords[i])) insidePoly = true
+  }
+
+  return insidePoly
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                 { "type": "LineString", "coordinates": [[0, 0], [5, 0]] })
+// false
+```
+
+## Point in polygon
+
+```javascript
+gju.<span class="apidocCodeKeywordSpan">pointInPolygon</span>({"type":"Point","coordinates":[3,3]},
+                 {"type":"Polygon", "coordinates":[[[0,0],[6,0],[6,6],[0,6]]]})
+// [{"type":"Point","coordinates":[3,3]}]
+gju.pointInPolygon({"type":"Point","coordinates":[-1,-1]},
+                 {"type":"Polygon", "coordinates":[[[0,0],[6,0],[6,6],[0,6]]]})
+// false
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.rectangleCentroid" id="apidoc.element.geojson-utils.rectangleCentroid">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>rectangleCentroid
+        <span class="apidocSignatureSpan">(rectangle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rectangleCentroid = function (rectangle) {
+  var bbox = rectangle.coordinates[0];
+  var xmin = bbox[0][0],
+    ymin = bbox[0][1],
+    xmax = bbox[2][0],
+    ymax = bbox[2][1];
+  var xwidth = xmax - xmin;
+  var ywidth = ymax - ymin;
+  return {
+    'type': 'Point',
+    'coordinates': [xmin + xwidth / 2, ymin + ywidth / 2]
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Radius filtering
+
+If you retrieve a bunch of results from a bounding box query (common with R-tree
+geo DBs), but you want to filter the rectangular result set by circular radius:
+
+```javascript
+// get the center of the original bounding box
+var center = gju.<span class="apidocCodeKeywordSpan">rectangleCentroid</span>({
+  "type": "Polygon",
+  "coordinates": [[[-122.677, 45.523], [-122.675, 45.524]]]
+}),
+// radius (in meters)
+radius = 100;
+
+for (var i in geometryObjectsWithinBBox) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.geojson-utils.simplify" id="apidoc.element.geojson-utils.simplify">
+        function <span class="apidocSignatureSpan">geojson-utils.</span>simplify
+        <span class="apidocSignatureSpan">(source, kink)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">simplify = function (source, kink) {<span class="apidocCodeCommentSpan"> /* source[] array of geojson points */
+</span>  /* kink	in metres, kinks above this depth kept  */
+  /* kink depth is the height of the triangle abc where a-b and b-c are two consecutive line segments */
+  kink = kink || 20;
+  source = source.map(function (o) {
+    return {
+      lng: o.coordinates[0],
+      lat: o.coordinates[1]
+    }
+  });
+
+  var n_source, n_stack, n_dest, start, end, i, sig;
+  var dev_sqr, max_dev_sqr, band_sqr;
+  var x12, y12, d12, x13, y13, d13, x23, y23, d23;
+  var F = (Math.PI / 180.0) * 0.5;
+  var index = new Array(); /* aray of indexes of source points to include in the reduced line */
+  var sig_start = new Array(); /* indices of start &amp; end of working section */
+  var sig_end = new Array();
+
+  /* check for simple cases */
+
+  if (source.length &lt; 3) return (source); /* one or two points */
+
+  /* more complex case. initialize stack */
+
+  n_source = source.length;
+  band_sqr = kink * 360.0 / (2.0 * Math.PI * 6378137.0); /* Now in degrees */
+  band_sqr *= band_sqr;
+  n_dest = 0;
+  sig_start[0] = 0;
+  sig_end[0] = n_source - 1;
+  n_stack = 1;
+
+  /* while the stack is not empty  ... */
+  while (n_stack &gt; 0) {
+
+    /* ... pop the top-most entries off the stacks */
+
+    start = sig_start[n_stack - 1];
+    end = sig_end[n_stack - 1];
+    n_stack--;
+
+    if ((end - start) &gt; 1) { /* any intermediate points ? */
+
+      /* ... yes, so find most deviant intermediate point to
+      either side of line joining start &amp; end points */
+
+      x12 = (source[end].lng() - source[start].lng());
+      y12 = (source[end].lat() - source[start].lat());
+      if (Math.abs(x12) &gt; 180.0) x12 = 360.0 - Math.abs(x12);
+      x12 *= Math.cos(F * (source[end].lat() + source[start].lat())); /* use avg lat to reduce lng */
+      d12 = (x12 * x12) + (y12 * y12);
+
+      for (i = start + 1, sig = start, max_dev_sqr = -1.0; i &lt; end; i++) {
+
+        x13 = source[i].lng() - source[start].lng();
+        y13 = source[i].lat() - source[start].lat();
+        if (Math.abs(x13) &gt; 180.0) x13 = 360.0 - Math.abs(x13);
+        x13 *= Math.cos(F * (source[i].lat() + source[start].lat()));
+        d13 = (x13 * x13) + (y13 * y13);
+
+        x23 = source[i].lng() - source[end].lng();
+        y23 = source[i].lat() - source[end].lat();
+        if (Math.abs(x23) &gt; 180.0) x23 = 360.0 - Math.abs(x23);
+        x23 *= Math.cos(F * (source[i].lat() + source[end].lat()));
+        d23 = (x23 * x23) + (y23 * y23);
+
+        if (d13 &gt;= (d12 + d23)) dev_sqr = d23;
+        else if (d23 &gt;= (d12 + d13)) dev_sqr = d13;
+        else dev_sqr = (x13 * y12 - y13 * x12) * (x13 * y12 - y13 * x12) / d12; // solve triangle
+        if (dev_sqr &gt; max_dev_sqr) {
+          sig = i;
+          max_dev_sqr = dev_sqr;
+        }
+      }
+
+      if (max_dev_sqr &lt; band_sqr) { /* is there a sig. intermediate point ? */
+        /* ... no, so transfer current start point */
+        index[n_dest] = start;
+        n_dest++;
+      } else { /* ... yes, so push two sub-sections on stack for further processing */
+        n_stack++;
+        sig_start[n_stack - 1] = sig;
+        sig_end[n_stack - 1] = end;
+        n_stack++;
+        sig_start[n_stack - 1] = start;
+        sig_end[n_stack - 1] = sig;
+      }
+    } else { /* ... no intermediate points, so transfer current start point */
+      index[n_dest] = start;
+      n_dest++;
+    }
+  }
+
+  /* transfer last point */
+  index[n_dest] = n_source - 1;
+  n_dest++;
+
+  /* make return array */
+  var r = new Array();
+  for (var i = 0; i &lt; n_dest; i++)
+    r.push(source[index[i]]);
+
+  return r.map(function (o) {
+    return {
+      type: "Point",
+      coordinates: [o.lng, o.lat]
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
